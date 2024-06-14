@@ -43,11 +43,13 @@ flatDir { dirs 'libs' }
 ```
 
 
+1. Copy libs directory to your root project directory
 
 build.gradle
 
 ```
 
+implementation(name:'sinch-android-rtc', version:'+', ext:'aar')
 implementation 'com.sinch.sdk.rtc.plugin:sinch-sdk-rtc-plugin:{version}'
 
 ```
@@ -67,24 +69,6 @@ implementation 'com.sinch.sdk.rtc.plugin:sinch-sdk-rtc-plugin:{version}'
 
 
 
-1. Add Activity to `AndroidManifest.xml`
-
-
-
-```kotlin
-
-<activity
-    android:name="com.sinch.chat.sdk.SinchChatActivity"
-    android:configChanges="orientation|screenSize|screenLayout|keyboardHidden"
-/>
-<activity
-    android:name="com.sinch.chat.sdk.SinchInboxChatActivity"
-    android:configChanges="orientation|screenSize|screenLayout|keyboardHidden"
-/>
-```
-
-
-
 Call method `initialize` with `SinchInitializationOptions` and `plugins` property.
 
 
@@ -98,7 +82,8 @@ val sinchRTCPlugin = SinchVideoRTCPluginSDK(
 		return@SinchVideoRTCPluginSDK this
 	},
 	  APPLICATION_KEY,
-	  APPLICATION_SECRET
+	  APPLICATION_SECRET,
+		FCM_SENDER_ID
 )
 options.plugins = listOf(sinchRTCPlugin)
 SinchChatSDK.initialize(this, options)
