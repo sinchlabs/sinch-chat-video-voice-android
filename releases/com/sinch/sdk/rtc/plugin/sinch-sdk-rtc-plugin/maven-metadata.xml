@@ -3,11 +3,11 @@
   <groupId>com.sinch.sdk.rtc.plugin</groupId>
   <artifactId>sinch-sdk-rtc-plugin</artifactId>
   <versioning>
-    <latest>0.1.20</latest>
-    <release>0.1.20</release>
+    <latest>0.1.21</latest>
+    <release>0.1.21</release>
     <versions>
-      <version>0.1.20</version>
+      <version>0.1.21</version>
     </versions>
-    <lastUpdated>20240614092451</lastUpdated>
+    <lastUpdated>20240614092725</lastUpdated>
   </versioning>
 </metadata>
