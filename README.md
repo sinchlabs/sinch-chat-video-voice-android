@@ -30,13 +30,6 @@ settings.gradle
 
 maven {
 	url "https://raw.githubusercontent.com/sinchlabs/sinch-chat-video-voice-android/master/releases"
-	credentials(HttpHeaderCredentials) {
-	  name = "Authorization"
-	  value = "Bearer {{ github_personal_access_token }}"
-	}
-	authentication {
-	  header(HttpHeaderAuthentication)
-	}
 }
 flatDir { dirs 'libs' }
 
